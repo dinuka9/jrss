@@ -114,4 +114,20 @@ public class RSSItem implements Item{
     public String getType() {
         return "rss";
     }
+
+    @Override
+    public String toString() {
+        return "RSSItem{" + "\n" +
+                "title='" + title + '\'' +", "+"\n" +
+                "link='" + link + '\'' +", "+"\n" +
+                "description='" + description + '\'' +", "+"\n" +
+                "pubDate='" + pubDate + '\'' +", "+"\n" +
+                "guid='" + guid + '\'' +", "+"\n" +
+                "category='" + category + '\'' +", "+"\n" +
+                "author='" + author + '\'' +", "+"\n" +
+                "comments='" + comments + '\'' +", "+"\n" +
+                "enclosure='" + enclosure + '\'' +", "+"\n" +
+                "source='" + source + '\'' +
+                '}';
+    }
 }

@@ -57,4 +57,15 @@ public class RSSHeader {
     public void setWebMaster(String webMaster) {
         this.webMaster = webMaster;
     }
+
+    @Override
+    public String toString() {
+        return "RSSHeader{" +
+                "title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", description='" + description + '\'' +
+                ", language='" + language + '\'' +
+                ", webMaster='" + webMaster + '\'' +
+                '}';
+    }
 }

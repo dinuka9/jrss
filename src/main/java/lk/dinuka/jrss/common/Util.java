@@ -68,9 +68,9 @@ public class Util {
     }
 
     public static String purify(String data) {
-        String pure = data;
+        String pure = "";
         for (Map.Entry m : htmlCode.entrySet()) {
-            pure = pure.replaceAll(m.getKey() + "", m.getValue().toString());
+            pure = data.replaceAll(m.getKey() + "", m.getValue().toString());
         }
         pure = pure.replaceAll(HTML_TAGS, "");
         return pure;
