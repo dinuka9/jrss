@@ -44,7 +44,7 @@ public class RSSStripper {
     }
 
     public List<RSSItem> getRSSItemList(String url) {
-        List<RSSItem> newsItemList = new ArrayList<RSSItem>();
+        List<RSSItem> newsItemList = new ArrayList<>();
         NodeList nList = normalizeDoc(url).getElementsByTagName("item");
         for (int temp = 0; temp < nList.getLength(); temp++) {
             Node nNode = nList.item(temp);
@@ -68,7 +68,7 @@ public class RSSStripper {
                 if (validateElementTag(eElement, "category")) {
                     catagory = eElement.getElementsByTagName("category").item(0).getTextContent();
                 }
-                if (validateElementTag(eElement, "pubDate")) {
+                if (validateElementTag(eElement, "pubDate" )) {
                     pubdate = eElement.getElementsByTagName("pubDate").item(0).getTextContent();
                 }
                 newsItemList.add(new RSSItem(title, link, description, pubdate));
